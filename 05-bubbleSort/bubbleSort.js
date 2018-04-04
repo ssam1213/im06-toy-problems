@@ -44,11 +44,10 @@ var bubbleSort = function(array) {
       var temp = array[i];
       array[i] = array[i+1];
       array[i+1] = temp;
-      console.log(array);
       bubbleSort(array);
     }
   }
-
+  return array;
 
 };
 
