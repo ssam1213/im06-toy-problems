@@ -29,6 +29,7 @@
 /*
  * Basic tree that stores a value.
  */
+// commit 07로 바꿈
 
 var Tree = function(value){
   this.value = value;
