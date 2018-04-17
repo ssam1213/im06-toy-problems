@@ -48,17 +48,16 @@ Tree.prototype.BFSelect = function(filter) {
       filtered.push(testTree.value);
     }
     
-
+    if (testTree.children.length === 0 ) {
+     return;
+    } else {
       depth++
       for(var i=0; i<testTree.children.length; i++){
-        if(filter(testTree.children[i].value, depth)){
-          filtered.push(testTree.value);
-        }
-        // for(var i=0; i<testTree.children.length; i++){
-        //   find(testTree.children[i], depth);
-        // }
-      }       
-  }
+        find(testTree.children[i], depth);
+      }
+      }   
+    }    
+  
   find(testTree, 0);
   return filtered;
 };
